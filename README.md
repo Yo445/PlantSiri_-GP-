@@ -1,4 +1,5 @@
-# Dashboard monitor water level by Reactjs + Nodejs irrigation 
+## Integrated agriculture water resource management system
+# Dashboard monitor water level 
 
 This simple web dashboard for monitor water level, client (Reactjs) will fetch data from backend server (Nodejs) by socket.io and backend server (Nodejs) fetch data from firebase realtime database.
 

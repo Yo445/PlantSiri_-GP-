@@ -1,26 +1,10 @@
-# Dashboard monitor water level by Reactjs + Nodejs
+# Dashboard monitor water level by Reactjs + Nodejs irrigation 
 
 This simple web dashboard for monitor water level, client (Reactjs) will fetch data from backend server (Nodejs) by socket.io and backend server (Nodejs) fetch data from firebase realtime database.
 
-## .ENV file for Server folder
 
-```
-NODE_ENV=production node index.js
-PORT=5001
-NODE_PRIVATE_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-NODE_DATABASEURL="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-NODE_PROJECT_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-NODE_PRIVATE_KEY_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-NODE_CLIENT_EMAIL="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-NODE_CLIENT_ID="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-NODE_CLIENT_X509="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-```
+![Screenshot 2024-02-10 230935](https://github.com/Yo445/PlantSiri_-GP-/assets/130509394/0a055c97-d7eb-41b7-85d3-0bfe25c433e5)
 
-Get this value from Firebase Admin SDK
-
-## Project photo
-
-<img alt="photo1" src="https://i.ibb.co/BfdZWcm/Screenshot-16.png">
 
 ## Other project
 

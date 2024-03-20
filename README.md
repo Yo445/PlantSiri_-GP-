@@ -2,10 +2,11 @@
 ## Dashboard monitor water level 
 
 
-This simple web dashboard for monitor water level, client (Reactjs) will fetch data from backend server (Nodejs) by socket.io and backend server (Nodejs) fetch data from firebase realtime database.
+A web dashboard for monitor water level, client (Reactjs) will fetch data from backend server (Nodejs) by socket.io and backend server (Nodejs) fetch data from firebase realtime database.
 
 
-![Screenshot 2024-02-10 230935](https://github.com/Yo445/PlantSiri_-GP-/assets/130509394/0a055c97-d7eb-41b7-85d3-0bfe25c433e5)
+
+![Screenshot 2024-03-20 125922](https://github.com/Yo445/PlantSiri_-GP-/assets/130509394/990c7f3e-e6c7-4f7d-b7e7-43f73af8ad5d)
 
 
 ## Other project

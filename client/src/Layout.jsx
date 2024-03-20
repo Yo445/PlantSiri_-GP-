@@ -1,13 +1,17 @@
 import React from "react";
-import NavbarComp from "./components/Nav/NavbarComp";
+import Navbar from "./components/Navbar";
 import { Outlet } from "react-router-dom";
-
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import Analysis from "./pages/Analysis/Analysis";
+import { theme } from "./theme";
 function Layout() {
   return (
-    <>
-      <NavbarComp />
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
+      <Navbar />
+      {/* <Analysis /> */}
       <Outlet />
-    </>
+      </ThemeProvider>
   );
 }
 

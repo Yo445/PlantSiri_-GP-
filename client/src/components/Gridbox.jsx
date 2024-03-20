@@ -21,13 +21,15 @@ const Gridbox = ({ title, value, icon }) => {
         <Typography
           variant="h6"
           mb="1rem"
-          sx={{ color: theme.palette.fontcustomcolor.default }}
+          sx={{ color: theme.palette.fontcustomcolor.defaul , width:"700px"}}
           alignItems="center"
-          fontSize="18px"
+          fontSize="25px"
         >
           {title}
         </Typography>
-        {icon}
+        {React.cloneElement(icon, {
+          fontSize: "large", // Adjust the font size of the icon
+        })}
       </Box>
 
       <Typography

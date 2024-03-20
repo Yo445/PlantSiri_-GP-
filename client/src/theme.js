@@ -7,17 +7,17 @@ export const theme = createTheme({
     },
     background: {
       default: "rgb(250, 250, 251)",
-      white: "#ffffff",
+      white: "#ffffff",//#fafdf4
     },
     fontcustomcolor: {
       default: "rgb(38, 38, 38)",
       second: "rgb(68, 89, 110)",
     },
     bordercolor: {
-      default: "rgb(240, 240, 240)",
+      default: "rgb(240, 240, 240)", //#7FB8A4 //#23d3eb
     },
     themecolor: {
-      default: "rgb(24, 144, 255)",//#7ba132 rgb(24, 144, 255) 
+      default: "rgb(24, 144, 255)", //#23d3eb //rgb(24, 144, 255)
     },
   },
   typography: {

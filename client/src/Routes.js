@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Watering from "./components/Watering/Watering";
-import Calendar from "./components/Calendar/Calendar";
-import Camera from "./components/Camera/Camera";
+
 import Layout from "./Layout";
+import Analysis from "./pages/Analysis/Analysis";
+import Wheat from "./pages/Wheat";
+import Corn from "./pages/Corn";
 
 const router = createBrowserRouter([
   {
@@ -11,16 +12,16 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/watering",
-        element: <Watering />,
+        path: "/Analysis",
+        element: <Analysis />,
       },
       {
-        path: "/calendar",
-        element: <Calendar />,
+        path: "/Wheat",
+        element: <Wheat />,
       },
       {
-        path: "/camera",
-        element: <Camera />,
+        path: "/Corn",
+        element: <Corn />,
       },
     ],
   },

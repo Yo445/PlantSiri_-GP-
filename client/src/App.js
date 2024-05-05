@@ -1,16 +1,16 @@
 import React from "react";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
-
-import { RouterProvider } from "react-router-dom";
-import router from "./Routes";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="app">
+    <div >
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <RouterProvider router={router} />
+      <Navbar />
+      <Outlet />
       </ThemeProvider>
     </div>
   );

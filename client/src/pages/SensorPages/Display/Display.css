@@ -1,0 +1,43 @@
+
+.card-container{
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+.transparent-card {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .display-content{
+    padding: 25px;
+    margin: 0;
+    justify-items: center;
+}
+.display-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 30px;
+    margin: 0;
+    justify-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .display-card {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  } */

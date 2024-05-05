@@ -22,24 +22,24 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: ["Public Sans", "sans-serif"].join(","),
-    fontSize: 12,
+    fontSize: 10,
     h1: {
-      fontSize: 40,
+      fontSize: 35,
     },
     h2: {
-      fontSize: 32,
+      fontSize: 30,
     },
     h3: {
-      fontSize: 24,
-    },
-    h4: {
       fontSize: 20,
     },
+    h4: {
+      fontSize: 15,
+    },
     h5: {
-      fontSize: 16,
+      fontSize: 14,
     },
     h6: {
-      fontSize: 14,
+      fontSize: 13,
     },
   },
 });

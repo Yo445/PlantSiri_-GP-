@@ -1,30 +1,26 @@
 import { createBrowserRouter } from "react-router-dom";
-
-
-import Layout from "./Layout";
-import Analysis from "./pages/Analysis/Analysis";
-import Wheat from "./pages/Wheat";
-import Corn from "./pages/Corn";
-
-const router = createBrowserRouter([
+import SensorInfo from "./pages/SensorPages/Sensor Info/SensorInfo";
+import HomePage from "./pages/home/HomePage"
+import App from "./App";
+export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       {
-        path: "/Analysis",
-        element: <Analysis />,
+        path: "/",
+        element: <HomePage />,
       },
       {
-        path: "/Wheat",
-        element: <Wheat />,
+        path: "/sensor-info/:id",
+        element: <SensorInfo />,
       },
       {
-        path: "/Corn",
-        element: <Corn />,
+        path: "*",
+        element: <HomePage />,
       },
     ],
   },
 ]);
 
-export default router;
+

@@ -1,15 +1,14 @@
-import * as React from "react";
+/* ChartRight.js */
+import React from "react";
 import DisplayCard from "../../../../components/DisplayCard";
-import Liquidgauge from "../../../../components/old/Liquidgauge";
 
-
-export default function ChartRight() {
+export default function ChartRight({ sensorData }) {
+    console.log(sensorData);
 
     return (
-        <div>
-            <DisplayCard title="Card 8" width="100%" height="840px">
-                {/* Add Your logic */}
-                <Liquidgauge />
+        <div className="right-content">
+            <DisplayCard title="Card 8" width="100%" height="810px">
+                {sensorData.name}
             </DisplayCard>
         </div>
     );

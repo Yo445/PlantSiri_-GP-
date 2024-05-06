@@ -5,26 +5,33 @@ import ChartRight from "./Chart Right/ChartRight";
 import LeftButton from "./Left Button/LeftButton";
 import LeftTop from "./Left Top/LeftTop";
 
-const AnalysisDisplay = () => {
+const AnalysisDisplay = ({ sensorData }) => {
+  if (!sensorData) {
+    return <div>Sensor not found</div>;
+  }
+
   return (
     <div className="analysis-content">
-      <Grid spacing={4} container>
-        <Grid xs={4} item>
-          <Grid spacing={4} direction="column" container>
-            <Grid item>
-              <LeftTop />
-            </Grid>
-            <Grid item>
-              <LeftButton />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid xs={8} item id="right-card">
-          <ChartRight />
-        </Grid>
-      </Grid>
+      <div className="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="pb-3">
+              <LeftTop sensorData={sensorData} />
+            </div>
+            <div class="row">
+            <div class="pb-3">
+              <LeftButton sensorData={sensorData}/>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <ChartRight sensorData={sensorData} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default AnalysisDisplay;
+

@@ -14,30 +14,42 @@
 
 
 
+.card-container span{
+  border: 0.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  /* color: rgb(41, 39, 39); */
+  padding: 5px;
+  margin: 10px;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 20px rgb(255, 166, 0);
+  }
 
+  .custom-button {
+    background:none;
+    border: 0.5px solid black;
+    border-radius: 7px;
+    color: rgb(0, 0, 0); /* White text */
+    padding: 10px 15px ; /* Padding */
+    text-align: center; /* Center text */
+    font-size: 16px; /* Increase font size */
 
-
-
-
-
-
-
-/* .display-content{
-    padding: 25px;
-    margin: 0;
-    justify-items: center;
-}
-.display-card{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    padding: 30px;
-    margin: 0;
-    justify-items: center;
   }
   
-  @media (max-width: 768px) {
-    .display-card {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-  } */
+  /* Change background color on hover */
+  .custom-button:hover {
+    background-color: #000000;
+    color: #fff;
+  }
+
+
+
+
+
+
+

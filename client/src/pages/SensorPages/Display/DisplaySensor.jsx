@@ -1,72 +1,82 @@
+/* display sensor */
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import DisplayCard from "../../../components/DisplayCard";
 import { Box } from "@mui/material";
-import LandslideIcon from "@mui/icons-material/Landslide";
-import OpacityIcon from "@mui/icons-material/Opacity";
-import TornadoIcon from "@mui/icons-material/Tornado";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFireFlameCurved } from "@fortawesome/free-solid-svg-icons";
-import './Display.css'
-const DisplaySensor = () => {
-  return (
+import "./Display.css";
+import { FaHistory } from "react-icons/fa";
 
-    <Box
-      className="card-container"
-      display="flex"
-      justifyContent="center"
-      flexWrap="wrap"
-    >
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-      <DisplayCard
-        title="Card 8"
-        content="Content 8"
-      // width="100%"
-      // height="100%"
-      />
-    </Box>
+
+const DisplaySensor = ({ sensorData }) => {
+  if (!sensorData) {
+    return <div>Sensor not found</div>;
+  }
+
+  return (
+    <div className="card-container">
+      <Container>
+        <Row>
+          <Col></Col>
+          <Col xs={6}><h1>{sensorData.name}<span>{sensorData.CropType}</span></h1></Col>
+          <Col><button className="custom-button"><FaHistory /></button></Col>
+        </Row>
+      </Container>
+      <Box display="flex" justifyContent="center" flexWrap="wrap">
+        <DisplayCard
+          className="card"
+          title="Temperature"
+        >
+          Max: {sensorData.Tmax}<br /> Min: {sensorData.Tmin}
+        </DisplayCard>
+
+        <DisplayCard
+          title="Humidity"
+        >
+          Max: ${sensorData.RH_max}, Min: ${sensorData.RH_min}
+        </DisplayCard>
+
+        <DisplayCard
+          title="Wind Speed"
+          content={`Wind Speed: ${sensorData.u2}`}
+        >
+
+        </DisplayCard>
+
+        <DisplayCard
+          title="Wind Speed"
+          content={`Wind Speed: ${sensorData.u2}`}
+        >
+
+        </DisplayCard>
+
+        <DisplayCard
+          title="Wind Speed"
+          content={`Wind Speed: ${sensorData.u2}`}
+        >
+
+        </DisplayCard>
+        <DisplayCard
+          title="Wind Speed"
+          content={`Wind Speed: ${sensorData.u2}`}
+        >
+
+        </DisplayCard>
+        <DisplayCard
+          title="Wind Speed"
+          content={`Wind Speed: ${sensorData.u2}`}
+        >
+
+        </DisplayCard>
+        <DisplayCard
+          title="Wind Speed"
+          content={`Wind Speed: ${sensorData.u2}`}
+        >
+
+        </DisplayCard>
+      </Box>
+    </div>
   );
 };
 
 export default DisplaySensor;
+

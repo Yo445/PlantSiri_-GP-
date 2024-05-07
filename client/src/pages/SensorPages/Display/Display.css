@@ -25,9 +25,18 @@
   margin: 10px;
     color: #fff;
     text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 20px rgb(255, 166, 0);
+    0 0 7px #f4ffde,
+    0 0 10px #eeffd3,
+    0 0 20px rgb(149, 255, 0);
+  }
+
+  .cycle_status{
+    color: #fff;
+    text-shadow:
+      0 0 7px #f4ffde,
+      0 0 10px #eeffd3,
+      0 0 20px rgb(149, 255, 0);
+      font-size: 55px;
   }
 
   .custom-button {

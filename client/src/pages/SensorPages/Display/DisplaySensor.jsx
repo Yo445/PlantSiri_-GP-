@@ -82,7 +82,7 @@ const DisplaySensor = ({ sensorData }) => {
           title="cycle_status"
           icon={<RunningWithErrorsIcon />}
         >
-          <h1>{sensorData.cycle_status}</h1>
+          <h1 className="cycle_status">{sensorData.cycle_status}</h1>
         </DisplayCard>
         {/* Temperature */}
         <DisplayCard

@@ -6,7 +6,9 @@ import "react-circular-progressbar/dist/styles.css";
 function CircularProgressBar({
   value,
   color,
-  unit, // Add unit prop here
+  unit,
+  width,
+  height 
 }) {
   const theme = useTheme();
 
@@ -15,7 +17,7 @@ function CircularProgressBar({
       value={value}
       unit={unit}
       styles={{
-        path: { stroke: color },
+        path: { stroke: color , width: width , height:height},
       }}
     >
       <Typography

@@ -34,14 +34,13 @@ const DisplayCard = ({
             <Box display="flex" justifyContent="space-between">
                 <Typography
                     variant="h6"
-                    mb="1rem"
                     sx={{ color: theme.palette.fontcustomcolor.default }}
                     alignItems="center"
-                    fontSize="20px"
+                    fontSize="16px"
                 >
                     {title}
                 </Typography>
-                {icon}
+                <div style={{fontSize:"18px"}}>{icon}</div>
             </Box>
             <Box
                 display="flex"

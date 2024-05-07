@@ -22,7 +22,7 @@ const DisplaySensor = ({ sensorData }) => {
   }
 
   return (
-    <div className="card-container">
+    <div className="display-content">
       {/* Header */}
       <Container>
         <Row>

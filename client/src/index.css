@@ -7,20 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   /* background-size: 100%; */
-  background: linear-gradient(-135deg, #acd0bbf6, #2b624bd4, #223d33f6); /* Sloping gradient from top right to bottom left */
+  background: linear-gradient(-135deg, #acd0bbf3, rgba(56, 129, 98, 0.776), #264338ca); 
 }
 
-/* @media (max-width: 768px) {
-  body, html {
-      background: #638e7b; 
-  }
-} */

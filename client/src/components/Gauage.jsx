@@ -1,7 +1,7 @@
 import React from "react";
 import { arc } from "d3-shape";
 import { scaleLinear } from "d3-scale";
-import './guage.css'
+import './components.css'
 
 const getCoordsOnArc = (angle, offset=10) => [
   Math.cos(angle - (Math.PI / 2)) * offset,

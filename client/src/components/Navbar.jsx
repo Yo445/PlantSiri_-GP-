@@ -1,19 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-    Container,
-    Nav,
-    Navbar,
-    NavDropdown,
-    Offcanvas,
-} from "react-bootstrap";
+import { Container, Navbar, Offcanvas } from "react-bootstrap";
 import { BiSolidLeaf } from "react-icons/bi";
+import OpacityIcon from "@mui/icons-material/Opacity";
 import sensorsData from "../Core/SensorsData";
 import { MdOutlineSensors } from "react-icons/md";
-import './Nav.css';
+import './components.css';
 
 function Header() {
     const expand = false; // set expand to false for the first navbar
+
     return (
         <Navbar key={expand} expand={expand} className="mb-3 p-4" bg="transparent">
             <Container fluid>
@@ -43,13 +39,13 @@ function Header() {
                     <hr />
 
                     <Offcanvas.Body>
-                        {/* Content of the offcanvas body */}
+                        {/* Content of the expand menue Sensors links*/}
+                        {/* map function */}
                         {sensorsData.map((sensN, i) => {
                             let index = i + 1; // Start index from 1
                             return (
-                                <>
+                                <React.Fragment key={sensN.id}>
                                     <Link
-                                        key={sensN.id}
                                         to={`/sensor-info/${sensN.sensor_id}`}
                                         className="nav-link"
                                         style={{ justifyContent: "center", textAlign: "center" }}
@@ -57,10 +53,11 @@ function Header() {
                                         <div style={{ justifyContent: "center", textAlign: "center", display: "-webkit-inline-box" }}>
                                             <h5>Sensor: #{index}</h5> {/* Use index instead of i */}
                                             <span className="sens-title">{sensN.name}</span>
+                                            {sensN.Status === "!Not Irrigated" && <OpacityIcon />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
                                         </div>
                                     </Link>
                                     <hr />
-                                </>
+                                </React.Fragment>
                             );
                         })}
                     </Offcanvas.Body>

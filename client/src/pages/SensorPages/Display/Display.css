@@ -1,6 +1,6 @@
 
-.card-container{
-  /* padding: 30px; */
+.display-content{
+  background: linear-gradient(-135deg, #acd0bbcf, rgba(56, 129, 99, 0.673), #3f725eac); 
   text-align: center;
 }
 
@@ -14,7 +14,7 @@
 
 
 
-.card-container span{
+.display-content span{
   border: 0.5px solid black;
   border-radius: 10px;
   text-align: center;

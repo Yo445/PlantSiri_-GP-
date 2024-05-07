@@ -13,7 +13,6 @@ export default function SensorInfo() {
   return (
     <div className='Sensor-info'>
       <DisplaySensor sensorData={sensorData} />
-      <hr />
       <AnalysisDisplay sensorData={sensorData}/>
     </div>
   );

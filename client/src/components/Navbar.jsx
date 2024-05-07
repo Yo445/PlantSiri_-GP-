@@ -53,7 +53,7 @@ function Header() {
                                         <div style={{ justifyContent: "center", textAlign: "center", display: "-webkit-inline-box" }}>
                                             <h5>Sensor: #{index}</h5> {/* Use index instead of i */}
                                             <span className="sens-title">{sensN.name}</span>
-                                            {sensN.Status === "!Not Irrigated" && <OpacityIcon />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
+                                            {sensN.Status === "!Not Irrigated" && <OpacityIcon className="drop" />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
                                         </div>
                                     </Link>
                                     <hr />

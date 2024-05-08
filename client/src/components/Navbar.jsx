@@ -26,7 +26,7 @@ function Header() {
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                <Navbar.Offcanvas style={{ backgroundColor: "#84baa0" }}
+                <Navbar.Offcanvas style={{ background:"rgba(255,255,255,0.05)",boxShadow:"0 8px 32px 0 rgba(31,38,135,.37)",backdropFilter:"blur(20px)",borderRadius:"10px"}}
                     id={`offcanvasNavbar-expand-${expand}`}
                     aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                     placement="end"
@@ -51,7 +51,7 @@ function Header() {
                                         style={{ justifyContent: "center", textAlign: "center" }}
                                     >
                                         <div style={{ justifyContent: "center", textAlign: "center", display: "-webkit-inline-box" }}>
-                                            <h5>Sensor: #{index}</h5> {/* Use index instead of i */}
+                                            <h5 style={{color:"#718c6e"}}>Sensor: #{index}</h5> {/* Use index instead of i */}
                                             <span className="sens-title">{sensN.name}</span>
                                             {sensN.Status === "!Not Irrigated" && <OpacityIcon className="drop" />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
                                         </div>

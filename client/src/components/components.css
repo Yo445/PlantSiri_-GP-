@@ -1,6 +1,6 @@
 .sen-icon{
     font-size: 25px;
-    color: white;
+    color: beige;
 
 }
 
@@ -13,7 +13,7 @@
     /* color: rgb(41, 39, 39); */
     padding: 5px;
     margin: 10px;
-      color: #000000;
+      color: #979795;
       
     }
 
@@ -35,4 +35,13 @@
   
   .drop{
     color: aqua;
+  }
+
+  .expand-menue{
+
+    background-color: rgb(187, 219, 135);
+    border-radius:6px;
+
+
+    
   }

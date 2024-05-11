@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import SensorInfo from "./pages/SensorPages/Sensor Info/SensorInfo";
 import HomePage from "./pages/home/HomePage"
+import NotFound from "./components/NotFound";
 import App from "./App";
+import Loading from "./components/Loading";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -16,8 +18,12 @@ export const router = createBrowserRouter([
         element: <SensorInfo />,
       },
       {
+        path: "/water",
+        element: <Loading />,
+      },
+      {
         path: "*",
-        element: <HomePage />,
+        element: <NotFound />,
       },
     ],
   },

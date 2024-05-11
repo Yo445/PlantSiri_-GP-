@@ -14,8 +14,14 @@ body {
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
-  /* background-size: 100%; */
-  background: linear-gradient(-135deg, #acd0bbf3, rgba(56, 129, 98, 0.776), #264338ca); 
+  background: 
+  -webkit-linear-gradient(-135deg, #acd0bbf3, rgba(56, 129, 98, 0.776), #264338ca); 
+      background: 
+       -o-linear-gradient(-135deg, #acd0bbf3, rgba(56, 129, 98, 0.776), #264338ca); 
+      background: 
+     -moz-linear-gradient(-135deg, #acd0bbf3, rgba(56, 129, 98, 0.776), #264338ca); 
+      background: 
+      linear-gradient(-135deg, #acd0bbf3, rgba(56, 129, 98, 0.776), #264338ca); 
+      min-height: 100%;
 }
 

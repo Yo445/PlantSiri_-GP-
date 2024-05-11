@@ -1,6 +1,6 @@
 
 .home {
-    height: 100%;
+    height: 85.5vh;
     width: 100%;
 }
 
@@ -41,23 +41,22 @@
 
 
 
-.content .name span {
-    background-image: linear-gradient(-135deg, #cbe6ea, #2b5762, #222a3df6);
-    background-size: 200% auto;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: shine 5s linear infinite;
+.content .name span{
+	font-size: 60px;
+	color: #2c3e5036;
+	background-image: url(https://res.cloudinary.com/drcrre4xg/image/upload/v1571101002/water_zvupjx.png);
+	-webkit-background-clip:text;
+	animation: water 15s infinite;
+}
+@keyframes water {
+	from{
+		background-position: left 0 top 0;
+	}
+	to{
+		background-position: left 1000px top 0;
+	}
 }
 
-@keyframes shine {
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
-}
 
 
 
@@ -83,5 +82,26 @@
     }
     50%{
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+} */
+
+
+
+
+/* .content .name span {
+    background-image: linear-gradient(-135deg, #cbe6ea, #2b5762, #222a3df6);
+    background-size: 200% auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
     }
 } */

@@ -15,10 +15,10 @@ import RunningWithErrorsIcon from '@mui/icons-material/RunningWithErrors';
 import { faFireFlameCurved } from "@fortawesome/free-solid-svg-icons";
 import Gauage from "../../../components/Gauage";
 import { WiHumidity } from "react-icons/wi";
-
+import NotFound from "../../../components/NotFound";
 const DisplaySensor = ({ sensorData }) => {
   if (!sensorData) {
-    return <div>Sensor not found</div>;
+    return <NotFound />;
   }
 
   return (

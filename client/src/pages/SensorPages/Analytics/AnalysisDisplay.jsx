@@ -9,6 +9,7 @@ import { MdBarChart } from "react-icons/md";
 import { MdOutlineLineAxis } from "react-icons/md";
 import { MdOutlineFilterList } from "react-icons/md"; // Import MdOutlineFilterList icon
 import { BsFilterRight } from "react-icons/bs";
+import NotFound from "../../../components/NotFound";
 
 const sample = [1, 10, 30, 50, 70, 90, 100]; //note this for the right and left button charts
 
@@ -20,7 +21,7 @@ const AnalysisDisplay = ({ sensorData }) => {
   };
 
   if (!sensorData) {
-    return <div>Sensor not found</div>;
+    return <NotFound />;
   }
 
   // Filter data based on selected year

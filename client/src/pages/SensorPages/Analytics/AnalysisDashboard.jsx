@@ -14,7 +14,7 @@ import sensorsData from "../../../Core/SensorsData"; // Importing sensor data
 
 const sample = [1, 10, 30, 50, 70, 90, 100]; //note this for the right and left button charts
 
-const AnalysisDisplay = () => {
+const AnalysisDashboard = () => {
   const YEARS = [2024, 2023, 2022, 2021, 2020];
 
   const [selectedYear, setSelectedYear] = useState(null);
@@ -141,4 +141,4 @@ const AnalysisDisplay = () => {
   );
 };
 
-export default AnalysisDisplay;
+export default AnalysisDashboard;

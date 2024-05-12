@@ -6,6 +6,9 @@ import OpacityIcon from "@mui/icons-material/Opacity";
 import sensorsData from "../Core/SensorsData";
 import { MdOutlineSensors } from "react-icons/md";
 import './components.css';
+import { TbDeviceAnalytics } from "react-icons/tb";
+import { SiGoogleanalytics } from "react-icons/si";
+
 
 function Header() {
     const expand = false; // set expand to false for the first navbar
@@ -35,6 +38,7 @@ function Header() {
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                             Sensors <MdOutlineSensors className="sen-icon" />
                         </Offcanvas.Title>
+                        <Link to={"/analysis"} className="nav-link" id="analysis-btn"><SiGoogleanalytics /></Link>
                     </Offcanvas.Header>
                     <hr />
 
@@ -53,7 +57,7 @@ function Header() {
                                         <div style={{ justifyContent: "center", textAlign: "center", display: "-webkit-inline-box" }}>
                                             <h5 style={{color:"#718c6e"}}>Sensor: #{index}</h5>
                                             <span className="sens-title">{sensN.name}</span>
-                                            {sensN.Status === "!Not Irrigated" && <OpacityIcon className="drop" />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
+                                            {sensN.Status === "!Not Irrigated" && <OpacityIcon style={{color:"aqua"}} />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
                                         </div>
                                     </Link>
                                     <hr />

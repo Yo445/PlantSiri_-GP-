@@ -11,6 +11,7 @@
     border-radius: 5px;
     margin-left: -20;
     display: inline-flex;
+    
 
   }
   
@@ -37,6 +38,8 @@
   
   .filter select option {
     padding: 10px;
+    color: #000000;
+
   }
   
   .filter select:focus {

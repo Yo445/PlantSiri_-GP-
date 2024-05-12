@@ -1,6 +1,5 @@
 import React from 'react'
 import './components.css'
-import { color } from 'd3-color'
 export default function NotFound() {
   return (
     <div className='container' style={{textAlign:"center", justifyContent:"center"}}>

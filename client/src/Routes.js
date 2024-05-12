@@ -4,6 +4,7 @@ import HomePage from "./pages/home/HomePage"
 import NotFound from "./components/NotFound";
 import App from "./App";
 import Loading from "./components/Loading";
+import AnalysisDashboard from "./pages/SensorPages/Analytics/AnalysisDashboard";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/water",
         element: <Loading />,
+      },
+      {
+        path: "/analysis",
+        element: <AnalysisDashboard />,
       },
       {
         path: "*",

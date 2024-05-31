@@ -1,0 +1,86 @@
+-- Create table for weather data
+CREATE TABLE weather_dimension (
+    weather_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    times_tamp VARCHAR(255) DEFAULT NULL,
+    Tmax DOUBLE DEFAULT NULL,
+    Tmin DOUBLE DEFAULT NULL,
+    Rs DOUBLE DEFAULT NULL,
+    u2 DOUBLE DEFAULT NULL,
+    RH_max DOUBLE DEFAULT NULL,
+    RH_min DOUBLE DEFAULT NULL,
+    P DOUBLE DEFAULT NULL,
+    G DOUBLE DEFAULT NULL
+);
+
+-- Create table for time data
+CREATE TABLE time_dimension (
+    time_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    times_tamp VARCHAR(255) DEFAULT NULL,
+    start_date VARCHAR(255) DEFAULT NULL,
+    end_date VARCHAR(255) DEFAULT NULL
+    end_time VARCHAR(255) DEFAULT NULL
+);
+
+-- Create table for location data
+CREATE TABLE location_dimension (
+    location_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    latitude DOUBLE DEFAULT NULL,
+    altitude DOUBLE DEFAULT NULL
+);
+
+-- Create table for irrigation data
+CREATE TABLE irrigation_dimension (
+    irrigation_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    times_tamp VARCHAR(255) DEFAULT NULL,
+    start_irrigation VARCHAR(255) DEFAULT NULL,
+    IrrigationDuration INT(11) DEFAULT NULL,
+    end_irrigation VARCHAR(255) DEFAULT NULL,
+    Status VARCHAR(255) DEFAULT NULL,
+    water_requirement DOUBLE DEFAULT NULL,
+    Area DOUBLE DEFAULT NULL,
+    irrigation_efficiency DOUBLE DEFAULT NULL,
+    flow_rate DOUBLE DEFAULT NULL
+);
+
+-- Create table for sensor data
+CREATE TABLE sensor_dimension (
+    sensor_id VARCHAR(255) NOT NULL PRIMARY KEY
+);
+
+
+-- Create table for cycle data
+CREATE TABLE cycle_dimension (
+    cycle_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Cycle INT(11) DEFAULT NULL,
+   
+);
+
+-- Create table for crop data
+CREATE TABLE crop_dimension (
+    crop_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CropType VARCHAR(255) DEFAULT NULL,
+    Kc DOUBLE DEFAULT NULL
+);
+
+-- Create table for fact data
+CREATE TABLE fact_table (
+    fact_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    time_id INT(11) DEFAULT NULL,
+    crop_id INT(11) DEFAULT NULL,
+    location_id INT(11) DEFAULT NULL,
+    cycle_id INT(11) DEFAULT NULL,
+    weather_id INT(11) DEFAULT NULL,
+    irrigation_id INT(11) DEFAULT NULL,
+    sensor_id VARCHAR(255) DEFAULT NULL, -- Add sensor_id column
+    ETc DOUBLE DEFAULT NULL,
+    ETc_mm DOUBLE DEFAULT NULL,
+    ET0 DOUBLE DEFAULT NULL,
+    cycle_status VARCHAR(255) DEFAULT NULL
+    FOREIGN KEY (time_id) REFERENCES time_dimension(time_id),
+    FOREIGN KEY (crop_id) REFERENCES crop_dimension(crop_id),
+    FOREIGN KEY (location_id) REFERENCES location_dimension(location_id),
+    FOREIGN KEY (cycle_id) REFERENCES cycle_dimension(cycle_id),
+    FOREIGN KEY (weather_id) REFERENCES weather_dimension(weather_id),
+    FOREIGN KEY (irrigation_id) REFERENCES irrigation_dimension(irrigation_id),
+    FOREIGN KEY (sensor_id) REFERENCES sensor_dimension(sensor_id) -- Add foreign key constraint
+);

@@ -1,0 +1,22 @@
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+.\bin\windows\kafka-topics.bat --create --topic your_topic_name --bootstrap-server localhost:9092 
+
+.\bin\windows\kafka-console-producer.bat --topic your_topic_name --bootstrap-server localhost:9092
+
+.\bin\windows\kafka-console-consumer.bat --topic your_topic_name --bootstrap-server localhost:9092
+
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092 
+
+
+## To run pyspark structure streaming with kafka ##
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.4 --jars F:\mysql-connector-j-8.3.0\mysql-connector-j-8.3.0.jar F:\toTestDimFact\A_Pyspark_Streaming.py  
+
+.\bin\windows\kafka-console-consumer.bat --topic MOSTAFA555 --bootstrap-server localhost:9092
+
+
+.\bin\windows\kafka-topics.bat --create --topic KAMAL3 --bootstrap-server localhost:9092 
+.\bin\windows\kafka-topics.bat --create --topic KARIM55 --bootstrap-server localhost:9092 
+.\bin\windows\kafka-topics.bat --create --topic MOSTAFA555 --bootstrap-server localhost:9092 

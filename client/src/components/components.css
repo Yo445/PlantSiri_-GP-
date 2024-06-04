@@ -1,0 +1,405 @@
+/* Navbar css*/
+.sen-icon{
+  font-size: 25px;
+  color: #75b370;
+}
+
+.sens-title{
+  border: 0.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  /* color: rgb(41, 39, 39); */
+  padding: 5px;
+  margin: 10px;
+  color: #979795;
+}
+
+.sens-title:hover{
+  color: #fff;
+  text-shadow:
+  0 0 7px #f4ffde,
+  0 0 10px #eeffd3,
+  0 0 20px rgb(149, 255, 0);
+}
+.sens-title:focus{
+  outline: none;
+  color: #fff;
+  text-shadow:
+  0 0 7px #f4ffde,
+  0 0 10px #eeffd3,
+  0 0 20px rgb(149, 255, 0);
+}
+
+.expand-menue{
+  background-color: rgb(187, 219, 135);
+  border-radius:6px;
+}
+
+#analysis-btn{
+  border: 0.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 2px;
+  color: #7e9c7b;
+  margin-left: 155px;
+  width: 45px;
+}
+
+.dropdown-toggle:hover {
+  color: white !important;
+  background-color: rgb(67, 79, 77) !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(67, 79, 77) !important;
+  color: white !important;
+}
+
+#analysis-btn:hover{
+  color: #fff;
+}
+
+  /*Not found css*/
+  .notfound-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85.5vh;
+    margin-bottom:auto;
+
+  }
+  .notfound-content .liquid {
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgb(187, 219, 135);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    animation: liquid 8s linear infinite alternate;
+  }
+  
+  @keyframes liquid{
+    0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+    14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+    28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+    42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+    56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+    70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+    84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+  }
+  .notfound-content .num{
+    font-size:200px;
+    font-family: cursive;
+    color: rgb(38, 38, 38);
+
+  }
+
+
+
+/* Loading css*/
+  .loading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85.5vh;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .corners {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-origin: center;
+    animation: spin 3s infinite linear;
+    margin-bottom: 50px;
+  }
+  
+  .corner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+    &::before {
+      display: block;
+      width: 48%;
+      height: 48%;
+      border-radius: 0 40% 0 40%;
+      background-color: rgb(187, 219, 135);
+      content: '';
+    }
+  }
+  
+  @keyframes spin1 {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(0deg); }
+    70% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes spin2 {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(270deg); }
+    70% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes spin3 {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(180deg); }
+    70% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes spin4 {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(90deg); }
+    70% { transform: rotate(90deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .corner--1 {
+    animation: spin1 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  }
+  
+  .corner--2 {
+    animation: spin2 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  }
+  
+  .corner--3 {
+    animation: spin3 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  }
+  
+  .corner--4 {
+    animation: spin4 3s infinite cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  }
+
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mixed-chart {
+    display: flex;
+    justify-content: center;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section input {
+    margin: 5px;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.input-section button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+/* Sun Css */
+.sun-content {
+  width: 350px;
+  height: 235px;
+  padding: 25px;
+  position: relative;
+  display: ruby;
+  text-align: center;
+  justify-content:center;
+}
+
+.temp {
+  position: absolute;
+  left: 25px;
+  bottom: 45px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 77px;
+  color: rgba(87, 77, 51, 1);
+}
+.sun {
+  position:fixed;
+  animation: rotate 4s linear infinite;
+  --color: yellow;
+  --scale: 0.4;
+}
+
+.center {
+  height: calc(var(--scale) * 10em);
+  width: calc(var(--scale) * 10em);
+  transition: background-color 2s linear, box-shadow 2s linear;
+  background-color: var(--color);
+  border-radius: 50%;
+  box-shadow: 0 0 calc(var(--scale) * 3em) var(--color);
+}
+
+.ray {
+  position: absolute;
+  height: calc(var(--scale) * 3em);
+  width: calc(var(--scale) * 0.5em);
+  transition: background-color 2s ease-in-out, box-shadow 2s ease-in-out;
+  box-shadow: 0 0 calc(var(--scale) * 1em) var(--color);
+  background-color: var(--color);
+}
+
+.r-1 {
+  margin-left: calc(var(--scale) * 4.75em);
+  margin-top: calc(var(--scale) * 1em);
+}
+
+.r-2 {
+  margin-left: calc(var(--scale) * 12.25em);
+  margin-top: calc(var(--scale) * -6.25em);
+  transform: rotate(90deg);
+}
+
+.r-3 {
+  margin-left: calc(var(--scale) * 4.75em);
+  margin-top: calc(var(--scale) * -14em);
+}
+
+.r-4 {
+  margin-left: calc(var(--scale) * -2.75em);
+  margin-top: calc(var(--scale) * -6.25em);
+  transform: rotate(90deg);
+}
+
+.r-5 {
+  margin-left: calc(var(--scale) * -0.5em);
+  margin-top: calc(var(--scale) * -1em);
+  transform: rotate(45deg);
+}
+
+.r-6 {
+  margin-left: calc(var(--scale) * 9.75em);
+  margin-top: calc(var(--scale) * -1em);
+  transform: rotate(-45deg);
+}
+
+.r-7 {
+  margin-left: calc(var(--scale) * 10.25em);
+  margin-top: calc(var(--scale) * -11.75em);
+  transform: rotate(45deg);
+}
+
+.r-8 {
+  margin-left: calc(var(--scale) * -0.5em);
+  margin-top: calc(var(--scale) * -11.75em);
+  transform: rotate(-45deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    --color: yellow;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    --color: orange;
+  }
+}
+
+
+
+/* water */
+
+
+.water-content {
+  background:rgba(255,255,255,0.05); 
+  backdrop-filter:blur(20px);
+  border: 0px;
+  outline: 0px;
+  width: 300px; /* Increased width */
+  height: 150px; /* Increased height */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+}
+
+.liquid-water {
+  background-color: rgb(32 120 193);
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 4px -5px 20px #1866a6ec, inset -5px 0px 25px #104e81ef;
+}
+
+.liquid-water::after {
+  content: '';
+  width: 600px; /* Increased width */
+  height: 500px; /* Increased height */
+  background: #5c957d; /* Changed background to transparent */
+  z-index: 1;
+  position: absolute;
+  left: -150px; /* Adjusted position */
+  top: -450px; /* Adjusted position */
+  border-radius: 45%;
+  animation: animate 5s linear 2s infinite;
+}
+
+.liquid-water::before {
+  content: '';
+  width: 600px; /* Increased width */
+  height: 500px; /* Increased height */
+  background-color: #268ee3; /* Changed background to semi-transparent */
+  z-index: 1;
+  position: absolute;
+  left: -150px; /* Adjusted position */
+  top: -450px; /* Adjusted position */
+  border-radius: 40%;
+  animation: animate 5s linear 1.8s infinite;
+}
+
+.water-value {
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  color:#104e81;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+

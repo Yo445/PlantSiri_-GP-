@@ -1,0 +1,42 @@
+{
+    "sensors": "Sensors",
+    "analysis": "Analysis",
+    "date": "Date",
+    "start": "Start",
+    "end": "End",
+    "remaining_time": "Remaining Time",
+    "hour_min_sec": "hour : min : sec",
+    "irrigation_status": "Irrigation Status",
+    "duration": "Duration",
+    "irrigation_duration": "Irrigation Duration",
+    "cycle": "Cycle",
+    "cycle_status": "Cycle Status",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "wind_speed": "Wind Speed",
+    "cycle_status_off": "OFF",
+    "cycle_status_on": "ON",
+    "analytics_dashboard": "Analytics Dashboard",
+    "avg_temperature": "AVG-Temperature",
+    "avg_humidity": "AVG-Humidity",
+    "solar_radiation": "Solar Radiation",
+    "water_requirement": "Water Requirement",
+    "area": "Area",
+    "line_chart": "Line Chart",
+    "scatter_chart": "Scatter Chart",
+    "bar_chart": "Bar Chart",
+    "select_year": "Select Year",
+    "no_data": "No data available",
+    "all_years":"Select",
+    "welcome_to": "Welcome to",
+    "integrated_agriculture_water_resource_management_system": "Integrated Agriculture <span>Water</span> Resource Management System",
+    "system_description": "An Integrated Agricultural Water Resources Management (IAWRM) system that improves water use, enhances agricultural productivity, conserves ecosystems, and ensures sustainable livelihoods for current and future generations.",
+    "soil_moisture":"Soil Moisture",
+    "AVG_soil_moisture":"AVG-Soil Moisture",
+    "crop":"wheat",
+    "ancrop":"crop"
+}
+
+
+
+    

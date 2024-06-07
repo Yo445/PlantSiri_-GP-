@@ -16,6 +16,7 @@
     "wind_speed": "Wind Speed",
     "cycle_status_off": "OFF",
     "cycle_status_on": "ON",
+    "cycle_status_truncate":"Truncate",
     "analytics_dashboard": "Analytics Dashboard",
     "avg_temperature": "AVG-Temperature",
     "avg_humidity": "AVG-Humidity",
@@ -34,9 +35,7 @@
     "soil_moisture":"Soil Moisture",
     "AVG_soil_moisture":"AVG-Soil Moisture",
     "crop":"wheat",
-    "ancrop":"crop"
+    "ancrop":"crop",
+    "irrigated": "Irrigated",
+    "not_irrigated": "Not Irrigated"
 }
-
-
-
-    

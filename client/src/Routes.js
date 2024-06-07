@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import SensorInfo from "./pages/SensorPages/Sensor Info/SensorInfo";
+import SensorInfo from "./pages/SensorPages/DisplaySensor/SensorInfo.jsx";
 import HomePage from "./pages/home/HomePage"
 import NotFound from "./components/NotFound";
 import App from "./App";
-import AnalysisDashboard from "./pages/SensorPages/Analytics/AnalysisDashboard";
+import Dashboard from "./pages/SensorPages/Dashboard/Dashboard"
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
 
       {
         path: "/analysis",
-        element: <AnalysisDashboard/>,
+        element: <Dashboard />,
       },
       {
         path: "*",

@@ -1,15 +1,16 @@
-const router = require("express").Router();
-const conn = require("../db/dbconnection");
-const util = require("util");
-
+const router = require('express').Router();
+const conn = require('../db/dbconnection');
+const util = require('util');
+const { updateEndDate }= require('./update')
 // Promisify the query function
 const queryAsync = util.promisify(conn.query).bind(conn);
 
 // drop down name sensor((true))
 // ************************************************************
-router.get("/sensors", async (req, res) => {
+router.get('/sensors', async (req, res) => {
   try {
-    const query = `
+    updateEndDate()
+      const query = `
           SELECT
               s.sensor_id,
               i.Status,
@@ -32,19 +33,22 @@ router.get("/sensors", async (req, res) => {
               i.row_num = 1;
       `;
 
-    const result = await queryAsync(query);
+      const result = await queryAsync(query);
 
-    res.json(result); // Sending the query result as a JSON response
+      res.json(result); // Sending the query result as a JSON response
   } catch (error) {
-    console.error("Error executing SQL query:", error);
-    res.status(500).json({ error: "Internal Server Error" }); // Sending an error response if there's an error
+      console.error('Error executing SQL query:', error);
+      res.status(500).json({ error: 'Internal Server Error' }); // Sending an error response if there's an error
   }
 });
 
 // *************************************
 // Route to get the last row of data for a specific sensor ID((true))
-router.get("/data/:sensorId", async (req, res) => {
+router.get('/data/:sensorId', async (req, res) => {
   try {
+    updateEndDate()
+    // updateEndDate()
+
     const sensorId = req.params.sensorId;
     const query = `
       SELECT 
@@ -84,20 +88,23 @@ router.get("/data/:sensorId", async (req, res) => {
         s.sensor_id = ?
         AND cy.Cycle BETWEEN 1 AND 6
       ORDER BY
-        t.start_date DESC
+        t.start_date DESC 
       LIMIT 1;
     `;
     const results = await queryAsync(query, [sensorId]);
 
+   
+
     res.json(results);
   } catch (err) {
-    console.error("Error fetching data:", err);
-    res.status(500).json({ error: "Failed to fetch data" });
+    console.error('Error fetching data:', err);
+    res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
 // ****************************
-router.get("/specificRoute/:sensorId/:year?", async (req, res) => {
-  try {
+router.get('/specificRoute/:sensorId/:year?', async (req, res) => {
+  try {    
+
     const sensorId = req.params.sensorId;
     let year = req.params.year;
 
@@ -151,15 +158,16 @@ router.get("/specificRoute/:sensorId/:year?", async (req, res) => {
 
     res.json(results);
   } catch (err) {
-    console.error("Error fetching data:", err);
-    res.status(500).json({ error: "Failed to fetch data" });
+    console.error('Error fetching data:', err);
+    res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
 
 // *******************
-
-router.get("/allDataSpecificYear/:year?", async (req, res) => {
+ 
+router.get('/allDataSpecificYear/:year?', async (req, res) => {
   try {
+
     let sqlQuery = `SELECT f.fact_id, s.sensor_id,
                         cr.CropType, t.start_date,
                         t.end_date, cy.Cycle, f.cycle_status,
@@ -187,14 +195,17 @@ router.get("/allDataSpecificYear/:year?", async (req, res) => {
 
     res.json(results); // Send the results as JSON response
   } catch (error) {
-    console.error("Error executing query: " + error);
-    res.status(500).json({ error: "Internal server error" });
+    console.error('Error executing query: ' + error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 // *************
 router.get('/sensorss_data', async (req, res) => {
   try {
+    updateEndDate()
+
     const query = `
       SELECT 
           AVG(w.Tmax) AS AVG_Tmax,
@@ -226,8 +237,13 @@ router.get('/sensorss_data', async (req, res) => {
     res.json(results);
   } catch (err) {
     console.error('Error fetching sensor data:', err);
-    res.status(500).json({ error: 'Failed to fetch sensor data' });
-  }
+    res.status(500).json({ error: 'Failed to fetch sensor data' });
+  }
 });
+
+
+
+
+
 
 module.exports = router;

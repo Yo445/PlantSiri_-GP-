@@ -3,6 +3,9 @@ import './components.css';
 
 export default function Sun1({ initialValue }) {
 
+  const formatValue = (value) => {
+    return value !== undefined ? parseFloat(value).toFixed(2) : 'N/A';
+  };
 
   return (
     <div className="sun-content">
@@ -17,14 +20,7 @@ export default function Sun1({ initialValue }) {
         <div className="ray r-7"></div>
         <div className="ray r-8"></div>
       </div>
-      <span className="temp">{initialValue.toFixed(2)} <span style={{color:"#707062",fontSize:"12px"}}>MJ/m²/day</span></span>
+      <span className="temp">{formatValue(initialValue)} <span style={{color:"#707062", fontSize:"12px"}}>MJ/m²/day</span></span>
     </div>
   );
 }
-
-
-
-
-{/* <div className='sun-content'>
-<div class="sun"></div>
-</div> */}

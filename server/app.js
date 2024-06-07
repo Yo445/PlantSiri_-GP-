@@ -30,10 +30,6 @@ updateEndDate()
 // Call the function to update end dates
 
 app.use("/", data);
-
 const server = app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-
-
-

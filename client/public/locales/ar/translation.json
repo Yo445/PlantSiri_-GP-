@@ -18,6 +18,7 @@
   "not_irrigated": "غير مروي",
   "cycle_status_off": "متوقف",
   "cycle_status_on": "مفتوح",
+  "cycle_status_truncate":"اقتطاع",
   "analytics_dashboard": "لوحة تحكم التحليلات",
   "avg_temperature": "متوسط درجة الحرارة",
   "avg_humidity": "متوسط الرطوبة",

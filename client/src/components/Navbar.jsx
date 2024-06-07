@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Container, Navbar, Offcanvas, Button, Dropdown } from "react-bootstrap";
+import { Container, Navbar, Offcanvas, Dropdown } from "react-bootstrap";
 import { BiSolidLeaf } from "react-icons/bi";
 import OpacityIcon from "@mui/icons-material/Opacity";
 import { MdOutlineSensors } from "react-icons/md";
@@ -13,8 +13,7 @@ function Header() {
     const { t, i18n } = useTranslation();
     const [sensorIds, setSensorIds] = useState([]);
 
-    useEffect(() => {
-        // Fetch sensor data from the API
+    const fetchSensorData = () => {
         axios.get("http://localhost:5000/sensors")
             .then(response => {
                 setSensorIds(response.data);
@@ -22,13 +21,24 @@ function Header() {
             .catch(error => {
                 console.error('Error fetching sensor IDs:', error);
             });
+    };
+
+    useEffect(() => {
+        // Fetch sensor data initially
+        fetchSensorData();
+
+        // Set up interval to fetch sensor data every 60 seconds
+        const interval = setInterval(fetchSensorData, 60000);
+
+        // Clear interval when the component unmounts
+        return () => clearInterval(interval);
     }, []);
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
 
-    const expand = false; // set expand to false for the first navbar
+    const expand = false; // Set expand to false for the first navbar
 
     return (
         <Navbar key={expand} expand={expand} className="mb-3 p-4" id="header">
@@ -42,7 +52,8 @@ function Header() {
                                 color: "rgb(187 219 135)",
                             }}
                         />
-                        <span style={{ color: "black" }}>Plant</span><span style={{ color: "rgb(187 219 135)" }}>SIrI</span>
+                        <span style={{ color: "black" }}>Plant</span>
+                        <span style={{ color: "rgb(187 219 135)" }}>SIrI</span>
                     </Link>
                 </Navbar.Brand>
                 <div>
@@ -66,7 +77,13 @@ function Header() {
                     </Dropdown>
                 </div>
                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                <Navbar.Offcanvas style={{ background: "rgba(255,255,255,0.05)", boxShadow: "0 8px 32px 0 rgba(31,38,135,.37)", backdropFilter: "blur(20px)", borderRadius: "10px" }}
+                <Navbar.Offcanvas
+                    style={{
+                        background: "rgba(255,255,255,0.05)",
+                        boxShadow: "0 8px 32px 0 rgba(31,38,135,.37)",
+                        backdropFilter: "blur(20px)",
+                        borderRadius: "10px"
+                    }}
                     id={`offcanvasNavbar-expand-${expand}`}
                     aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                     placement="end"
@@ -75,7 +92,9 @@ function Header() {
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                             {t('sensors')} <MdOutlineSensors className="sen-icon" />
                         </Offcanvas.Title>
-                        <Link to={"/analysis"} className="nav-link" id="analysis-btn"><BsPieChartFill /></Link>
+                        <Link to={"/analysis"} className="nav-link" id="analysis-btn">
+                            <BsPieChartFill />
+                        </Link>
                     </Offcanvas.Header>
                     <hr />
                     <Offcanvas.Body>
@@ -85,12 +104,12 @@ function Header() {
                                 <Link
                                     to={`/sensor-info/${sensorId.sensor_id}`}
                                     className="nav-link"
-                                    style={{ justifyContent: "center", textAlign: "center" }}
+                                    style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
                                 >
-                                    <div style={{ justifyContent: "center", textAlign: "center", display: "-webkit-inline-box" }}>
-                                        <h5 style={{ color: "#718c6e" }}>S#{index + 1}</h5> {/* Add 1 to index to start from 1 */}
+                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                        <h5 style={{ color: "#718c6e", marginRight: "5px" }}>S#{index + 1}</h5> {/* Add 1 to index to start from 1 */}
                                         <span className="sens-title">{sensorId.sensor_id}</span>
-                                        {sensorId.Status === "!Not Irrigated" && <OpacityIcon style={{ color: "aqua" }} />} {/* Render OpacityIcon when Status is "!Not Irrigated" */}
+                                        {sensorId.Status === "not irrigated" && <OpacityIcon style={{ color: "aqua" }} />} {/* Render OpacityIcon when Status is "not irrigated" */}
                                     </div>
                                 </Link>
                                 <hr />

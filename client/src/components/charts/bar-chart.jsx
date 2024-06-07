@@ -118,13 +118,13 @@ const DATA = [
 ]
 
 const BarChartComponent = ({ data, barColor }) => {
-    const formatTick = (tick) => (tick * 1000).toFixed(3);
+    // const formatTick = (tick) => (tick * 1000).toFixed(2);
 
     return (
         <ResponsiveContainer width={"80%"} height={190}>
             <BarChart width={150} height={150} data={data}>
                 <XAxis dataKey={'Cycle'} stroke="black" />
-                <YAxis stroke="black" tickFormatter={formatTick} />
+                <YAxis stroke="black" />
                 <Bar dataKey={'ET0_mm'} fill={barColor} />
             </BarChart>
         </ResponsiveContainer>

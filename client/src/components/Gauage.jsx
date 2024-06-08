@@ -68,7 +68,7 @@ export default function Gauge({
           >
             {gradientSteps.map((color, index) => (
               <stop
-                key={`${color}-${index}`}
+                key={color}
                 stopColor={color}
                 offset={`${index / (gradientSteps.length - 1)}`}
               />
@@ -99,7 +99,13 @@ export default function Gauge({
           {units}
         </div>}
         {unitIcon && <div style={{ marginLeft: '0.2em', color: strokeColor }}>{unitIcon}</div>}
+
       </div>
+      {/* {!!units && (
+        <div style={{ lineHeight: "1em", fontWeight: "200", fontSize: "1.5em", color: strokeColor }}>
+          {units}
+        </div>
+      )} */}
     </div>
   );
 }

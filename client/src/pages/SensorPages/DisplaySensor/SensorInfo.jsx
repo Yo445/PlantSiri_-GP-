@@ -14,7 +14,8 @@ export default function SensorInfo() {
       try {
         console.log(id);
         const response = await axios.get(`http://localhost:5000/data/${id}`);
-        setSensorData(response.data[0]); // Assuming you only expect one result
+        setSensorData(response.data[0]);
+         // Assuming you only expect one result
       } catch (error) {
         console.error("Error fetching sensor data:", error);
       }

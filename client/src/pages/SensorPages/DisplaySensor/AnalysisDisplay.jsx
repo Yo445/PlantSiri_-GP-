@@ -109,12 +109,12 @@ const AnalysisDisplay = ({ sensorData }) => {
                 </Col>
                 <Col sm={11}>
                     <DisplayCard
-                        title={t('line_chart')}
+                        title={"Tmax Vs Tmin"}
                         width="100%"
                         height="100%"
                         icon={<FaChartLine />}
                     >
-                        <LineChartComponent data={chartData} lineColor="#ffbe0b" />
+                        <LineChartComponent data={chartData} lineColor1="#892323"  lineColor2="#b9e8ea" />
                     </DisplayCard>
                 </Col>
             </Row>
@@ -133,7 +133,7 @@ const AnalysisDisplay = ({ sensorData }) => {
                 </Col>
                 <Col sm={6}>
                     <DisplayCard
-                        title={t('bar_chart')}
+                        title={'ET0_mm'}
                         width="100%"
                         height="100%"
                         icon={<MdBarChart />}

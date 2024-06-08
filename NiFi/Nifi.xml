@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description>Template NiFi</description>
+    <groupId>c93b2fd3-018f-1000-9d2b-6cacc27a220e</groupId>
+    <name>Nifi</name>
+    <snippet>
+        <connections>
+            <id>1e33623a-c44b-3e0c-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>3aca3efe-a00b-37fe-0000-000000000000</id>
+                <type>FUNNEL</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>b291d35e-3858-35f6-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>8dd9a586-dd48-396a-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>b291d35e-3858-35f6-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>9c23d5b7-c200-3b48-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>9cd356e5-f15f-379d-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>db12b97a-2036-31f9-0000-000000000000</id>
+                <type>FUNNEL</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>9c23d5b7-c200-3b48-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>a9816c47-7bdf-3ebc-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>9c23d5b7-c200-3b48-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>14e4c92b-2839-31d4-0000-000000000000</groupId>
+                <id>c710911b-2d2f-3528-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <funnels>
+            <id>3aca3efe-a00b-37fe-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <position>
+                <x>672.0</x>
+                <y>520.0</y>
+            </position>
+        </funnels>
+        <funnels>
+            <id>db12b97a-2036-31f9-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <position>
+                <x>640.0</x>
+                <y>288.0</y>
+            </position>
+        </funnels>
+        <processors>
+            <id>9c23d5b7-c200-3b48-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>224.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-scripting-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.11.4</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Script Engine</key>
+                        <value>
+                            <name>Script Engine</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Script File</key>
+                        <value>
+                            <name>Script File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Script Body</key>
+                        <value>
+                            <name>Script Body</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Module Directory</key>
+                        <value>
+                            <name>Module Directory</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Script Engine</key>
+                        <value>python</value>
+                    </entry>
+                    <entry>
+                        <key>Script File</key>
+                    </entry>
+                    <entry>
+                        <key>Script Body</key>
+                        <value>import math
+import datetime 
+import json
+from org.apache.commons.io import IOUtils
+from java.nio.charset import StandardCharsets
+from org.apache.nifi.processor.io import StreamCallback
+
+# Define a subclass of StreamCallback for handling incoming flow files
+class PyStreamCallback(StreamCallback):
+    def _init_(self):
+        pass
+
+    def process(self, inputStream, outputStream):
+        try:
+            # Read the input flow file content as a string
+            input_text = IOUtils.toString(inputStream, StandardCharsets.UTF_8)
+            
+            # Parse the JSON data
+            data = json.loads(input_text)
+            
+            # Extract required variables from JSON data
+            Tmax = data["Tmax"]
+            Tmin = data["Tmin"]
+            Rs = data["Rs"]
+            u2 = data["u2"]
+            RH_max = data["RH_max"]
+            RH_min = data["RH_min"]
+            P = data["P"]
+            cp = data["cp"]
+            latent_heat_of_vaporization = data["latent_heat_of_vaporization"]
+            latitude = data["latitude"]
+            altitude = data["altitude"]
+            albedo = data["albedo"]
+            emissivity = data["emissivity"]
+            G = data["G"]
+			
+            # Calculate Julian day
+            current_date = datetime.datetime.now()
+            julian_day = current_date.timetuple().tm_yday
+            
+            # Calculate mean temperature
+            Tmean = (Tmax + Tmin) / 2
+
+            # Constants for the Clausius–Clapeyron equation
+            a = 17.27
+            b = 237.7
+
+            # Temperature in Celsius
+            T = Tmean
+
+            # Saturated vapor pressure calculation
+            es = 0.6108 * math.exp((a * T) / (T + b))
+            pressure_curve = (4098 * es) / math.pow(T + 237.3, 2)
+
+            # Calculate the psychrometric constant (γ)
+            gamma = cp * P / (0.622 * latent_heat_of_vaporization)
+
+            # Calculate the Delta term (DT)
+            DT = pressure_curve / (pressure_curve + gamma * (1 + 0.34 * u2))
+
+            # Calculate mean saturation vapor pressure (es)
+            et_max = 0.6108 * math.exp((a * Tmax) / (Tmax + b))
+            et_min = 0.6108 * math.exp((a * Tmin) / (Tmin + b))
+            es = (et_max + et_min) / 2
+
+            # Calculate actual vapor pressure (ea)
+            ea = (et_min * (RH_max / 100) + et_max * (RH_min / 100)) / 2
+
+            # Calculate the inverse relative distance Earth-Sun (dr) and solar declination (delta)
+            e = 0.0167
+            M = 2 * math.pi * (julian_day - 1) / 365.0
+            E = M
+            for _ in range(10):
+                E = M + e * math.sin(E)
+            w = 2 * math.pi / 365.0
+            equation_of_time = 229.18 * (0.000075 + 0.001868 * math.cos(M) - 0.032077 * math.sin(M) - 0.014615 * math.cos(2 * M) - 0.040849 * math.sin(2 * M))
+            solar_declination = math.asin(math.sin(E) * math.sin(math.radians(23.45)))
+            dr = 1 + e * math.cos(E)
+
+            # Convert latitude (Φ) in degrees to radians
+            latitude_rad = math.radians(latitude)
+            solar_declination_rad = math.radians(solar_declination)
+            sunset_hour_angle = math.acos(-math.tan(latitude_rad) * math.tan(solar_declination_rad))
+            solar_constant = 0.0820
+            Ra = solar_constant * dr * (sunset_hour_angle * math.sin(latitude_rad) * math.sin(solar_declination) + math.cos(latitude_rad) * math.cos(solar_declination) * math.sin(sunset_hour_angle))
+            
+            # Calculate net solar radiation (Rns)
+            Rns = (1 - albedo) * Rs
+
+            # Calculate net outgoing long wave solar radiation (Rnl)
+            sigma = 5.67e-8  # W m^-2 K^-4
+            T_mean_kelvin = Tmean + 273.16
+            Rnl = sigma * emissivity * (T_mean_kelvin ** 4) * ((1 / emissivity) - 1) * 1e-9
+
+            # Calculate net radiation (Rn)
+            Rn = Rns - Rnl
+
+            # Implement the full Penman-Monteith equation
+            ET0 = (0.408 * DT * (Rn - G) + gamma * (900 / (Tmax + 273)) * u2 * (es - ea)) / (DT + gamma * (1 + 0.34 * u2))
+
+            # Add ET0 to the original data
+            data["ET0"] = ET0
+            
+            # Write the output data as JSON to the output stream
+            outputStream.write(json.dumps(data).encode('utf-8'))
+        finally:
+            # Close the input and output streams
+            inputStream.close()
+            outputStream.close()
+
+# Instantiate the StreamCallback subclass
+callback = PyStreamCallback()
+
+# Execute the callback
+flowFile = session.get()
+if flowFile is not None:
+    flowFile = session.write(flowFile, callback)
+    session.transfer(flowFile, REL_SUCCESS)
+</value>
+                    </entry>
+                    <entry>
+                        <key>Module Directory</key>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>ExecuteScript</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.script.ExecuteScript</type>
+        </processors>
+        <processors>
+            <id>b291d35e-3858-35f6-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <position>
+                <x>8.0</x>
+                <y>472.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-kafka-0-9-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.11.4</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>bootstrap.servers</key>
+                        <value>
+                            <name>bootstrap.servers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>security.protocol</key>
+                        <value>
+                            <name>security.protocol</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>sasl.kerberos.service.name</key>
+                        <value>
+                            <name>sasl.kerberos.service.name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ssl.context.service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                            <name>ssl.context.service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>topic</key>
+                        <value>
+                            <name>topic</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>acks</key>
+                        <value>
+                            <name>acks</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>kafka-key</key>
+                        <value>
+                            <name>kafka-key</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>key-attribute-encoding</key>
+                        <value>
+                            <name>key-attribute-encoding</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>message-demarcator</key>
+                        <value>
+                            <name>message-demarcator</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>max.request.size</key>
+                        <value>
+                            <name>max.request.size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ack.wait.time</key>
+                        <value>
+                            <name>ack.wait.time</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>max.block.ms</key>
+                        <value>
+                            <name>max.block.ms</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>partitioner.class</key>
+                        <value>
+                            <name>partitioner.class</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>compression.type</key>
+                        <value>
+                            <name>compression.type</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>bootstrap.servers</key>
+                        <value>localhost:9092</value>
+                    </entry>
+                    <entry>
+                        <key>security.protocol</key>
+                        <value>PLAINTEXT</value>
+                    </entry>
+                    <entry>
+                        <key>sasl.kerberos.service.name</key>
+                    </entry>
+                    <entry>
+                        <key>ssl.context.service</key>
+                    </entry>
+                    <entry>
+                        <key>topic</key>
+                        <value>Nifi2Spark</value>
+                    </entry>
+                    <entry>
+                        <key>acks</key>
+                        <value>0</value>
+                    </entry>
+                    <entry>
+                        <key>kafka-key</key>
+                    </entry>
+                    <entry>
+                        <key>key-attribute-encoding</key>
+                        <value>utf-8</value>
+                    </entry>
+                    <entry>
+                        <key>message-demarcator</key>
+                    </entry>
+                    <entry>
+                        <key>max.request.size</key>
+                        <value>1 MB</value>
+                    </entry>
+                    <entry>
+                        <key>ack.wait.time</key>
+                        <value>5 secs</value>
+                    </entry>
+                    <entry>
+                        <key>max.block.ms</key>
+                        <value>5 sec</value>
+                    </entry>
+                    <entry>
+                        <key>partitioner.class</key>
+                        <value>org.apache.kafka.clients.producer.internals.DefaultPartitioner</value>
+                    </entry>
+                    <entry>
+                        <key>compression.type</key>
+                        <value>none</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>PublishKafka</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.kafka.pubsub.PublishKafka</type>
+        </processors>
+        <processors>
+            <id>c710911b-2d2f-3528-0000-000000000000</id>
+            <parentGroupId>14e4c92b-2839-31d4-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-kafka-0-9-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.11.4</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>bootstrap.servers</key>
+                        <value>
+                            <name>bootstrap.servers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>security.protocol</key>
+                        <value>
+                            <name>security.protocol</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>sasl.kerberos.service.name</key>
+                        <value>
+                            <name>sasl.kerberos.service.name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ssl.context.service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                            <name>ssl.context.service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>topic</key>
+                        <value>
+                            <name>topic</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>group.id</key>
+                        <value>
+                            <name>group.id</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>auto.offset.reset</key>
+                        <value>
+                            <name>auto.offset.reset</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>key-attribute-encoding</key>
+                        <value>
+                            <name>key-attribute-encoding</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>message-demarcator</key>
+                        <value>
+                            <name>message-demarcator</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>max.poll.records</key>
+                        <value>
+                            <name>max.poll.records</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>max-uncommit-offset-wait</key>
+                        <value>
+                            <name>max-uncommit-offset-wait</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>bootstrap.servers</key>
+                        <value>localhost:9092</value>
+                    </entry>
+                    <entry>
+                        <key>security.protocol</key>
+                        <value>PLAINTEXT</value>
+                    </entry>
+                    <entry>
+                        <key>sasl.kerberos.service.name</key>
+                    </entry>
+                    <entry>
+                        <key>ssl.context.service</key>
+                    </entry>
+                    <entry>
+                        <key>topic</key>
+                        <value>SensorToNifi</value>
+                    </entry>
+                    <entry>
+                        <key>group.id</key>
+                        <value>user</value>
+                    </entry>
+                    <entry>
+                        <key>auto.offset.reset</key>
+                        <value>latest</value>
+                    </entry>
+                    <entry>
+                        <key>key-attribute-encoding</key>
+                        <value>utf-8</value>
+                    </entry>
+                    <entry>
+                        <key>message-demarcator</key>
+                    </entry>
+                    <entry>
+                        <key>max.poll.records</key>
+                        <value>10000</value>
+                    </entry>
+                    <entry>
+                        <key>max-uncommit-offset-wait</key>
+                        <value>1 secs</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>ConsumeKafka</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.kafka.pubsub.ConsumeKafka</type>
+        </processors>
+    </snippet>
+    <timestamp>06/06/2024 16:45:30 EET</timestamp>
+</template>

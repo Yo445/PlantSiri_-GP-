@@ -1,0 +1,18 @@
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+_______
+open xampp
+_______
+
+open nifi with  >>>> run-nifi.bat 
+_____
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.4 --jars C:\mysql-connector-j-8.3.0\mysql-connector-j-8.3.0.jar D:\level_4\ProjectGraduation\GP_1\BigData\A_Pyspark_Streaming.py
+
+python A_GP_Main.py
+
+python A_GP_New.py
+
+npm start 

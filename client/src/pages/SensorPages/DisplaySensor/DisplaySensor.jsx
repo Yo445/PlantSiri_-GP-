@@ -18,73 +18,45 @@ import { FaTemperatureHalf } from "react-icons/fa6";
 import RunningWithErrorsIcon from '@mui/icons-material/RunningWithErrors';
 import NotFound from "../../../components/NotFound";
 import { WiHumidity } from "react-icons/wi";
-function capitalize(str) {
-  return str.replace(/\b\w/g, function(char) {
-      return char.toUpperCase();
-  });
-}
-function getTimeDifference(currentTime, dbTime) {
-  // Parse the current time
-  const current = new Date(currentTime);
-
-  // Parse the time from the database
-  const [dbHours, dbMinutes, dbSeconds] = dbTime.split(":");
-  const dbMilliseconds = (parseInt(dbHours, 10) * 3600 + parseInt(dbMinutes, 10) * 60 + parseInt(dbSeconds, 10)) * 1000;
-
-  // Calculate the difference in milliseconds
-  const difference = dbMilliseconds - current.getTime();
-
-  // Convert difference to hours, minutes, seconds
-  const hours = Math.floor(Math.abs(difference) / (1000 * 60 * 60));
-  const minutes = Math.floor((Math.abs(difference) % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((Math.abs(difference) % (1000 * 60)) / 1000);
-
-  // Format the difference
-  const formattedDifference = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-  return formattedDifference;
-}
-
-const formatTime = (totalSeconds) => {
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
-  return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-};
-
 
 const DisplaySensor = ({ sensorData }) => {
   const { t } = useTranslation();
 
 //------------------------------------
   /* حاجات الساعة و حلة الرى */
-  // const initialTime = localStorage.getItem('remainingTime') ? parseInt(localStorage.getItem('remainingTime')) : sensorData.IrrigationDuration;
-const currentTime  = new Date();
-
-const initialTime = getTimeDifference(currentTime, sensorData.end_irrigation);
-
-console.log(currentTime,sensorData.end_irrigation,initialTime)
+  const initialTime = localStorage.getItem('remainingTime') ? parseInt(localStorage.getItem('remainingTime')) : sensorData.IrrigationDuration;
   const [remainingTime, setRemainingTime] = useState(initialTime);
   const [status, setStatus] = useState(sensorData.Status);
-  
-   
+
+useEffect(() => {
+  if((new Date(sensorData.times_tamp).getTime() + (sensorData.IrrigationDuration*1000) - new Date().getTime() )/1000 <0){
+    setRemainingTime(0)
+  }
+  else{
+    setRemainingTime(((new Date(sensorData.times_tamp).getTime() + (sensorData.IrrigationDuration*1000) - new Date().getTime() )/1000))
+
+  }
+},[sensorData.IrrigationDuration])
+
   useEffect(() => {
     const interval = setInterval(() => {
       setRemainingTime(prevTime => {
         const newTime = prevTime > 0 ? prevTime - 1 : 0;
-        localStorage.setItem(`remainingTime`, newTime);
-        // if (newTime === 0 && status === "not irrigated" ) {
-        //   setStatus("irrigated");
-        //   sensorData.Status = "irrigated";
-        // }
-
+        localStorage.setItem('remainingTime', newTime);
         return newTime;
       });
     }, 1000);
 
     return () => clearInterval(interval);
   }, [status, sensorData]);
-  
+
+  const formatTime = (totalSeconds) => {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    
+    return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
 //------------------------------------
 
   const formatValue = (value) => {
@@ -128,7 +100,6 @@ console.log(currentTime,sensorData.end_irrigation,initialTime)
   };
 
   const temperatureSettings = getTemperatureSettings(sensorData.Tmax);
-
   return (
     <div className="display-content">
       {/* Header */}
@@ -162,7 +133,7 @@ console.log(currentTime,sensorData.end_irrigation,initialTime)
           icon={<MdTimer />}
         >
           <div>
-            <h1 style={{ fontSize: "50px", color: "#467aa6" }}>{sensorData.Status === "irrigated" ? formatTime(0) : formatTime(sensorData.IrrigationDuration)}</h1>
+            <h1 style={{ fontSize: "50px", color: "#467aa6" }}>{sensorData.Status === "irrigated" ? formatTime(0) : formatTime(remainingTime)}</h1>
             <p style={{ fontSize: "24px", textAlign: "center", marginTop: "0", marginBottom: "5px", color: "#467aa6" }}>{t('hour_min_sec')}</p>
           </div>
         </DisplayCard>
@@ -173,7 +144,7 @@ console.log(currentTime,sensorData.end_irrigation,initialTime)
           icon={<ShowerIcon fontSize="large" />}
         >
           <h1 style={{ color: sensorData.Status === "not irrigated" ? "#6b2f4b" : "#78f8fb" }}>
-            {capitalize(sensorData.Status)}
+            {sensorData.Status}
           </h1>
         </DisplayCard>
 {/*--------------------------------------------------*/}
